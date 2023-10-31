@@ -25,9 +25,10 @@ listint_t *insert_node(listint_t **head, int number)
 	node->next = NULL;
 
 	if (*head == NULL) /*If the pointer to head is NULL*/
+	{
 		*head = node;
 		return (*head);
-
+	}
 	current = *head;
 
 	if (number <= current->n)/*Placing the number at the start of the list*/
