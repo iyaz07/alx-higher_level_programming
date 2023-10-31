@@ -1,2 +1,2 @@
-#!/bin/python
-print('"Progiramming is like building a multilingual puzzle\n')
+#!/bin/python3
+print('"Programming is like building a multilingual puzzle')
