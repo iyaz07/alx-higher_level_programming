@@ -7,4 +7,3 @@ if __name__ == "__main__":
     for arg in arguments:
         total += int(arg)
     print("{:d}".format(total))
-
