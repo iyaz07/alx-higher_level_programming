@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
         elementCount = len(matrix[i])
 
         for j in range(elementCount):
-            print('{:d}'.format(matrix[i][j]), end = '')
-            print(end = ' ' if j < (elementCount - 1) else '')
-        print(end ='\n')
+            print('{:d}'.format(matrix[i][j]), end='')
+            print(end=' ' if j < (elementCount - 1) else '')
+        print(end='\n')
