@@ -19,18 +19,18 @@ int is_palindrome(listint_t **head)
 	}
 	start = *head;
 	temp = *head;
-	
+
 	while (temp != NULL)
 	{
 		length++;
 		temp = temp->next;
 	}
-	setArray = malloc(length *sizeof(int));
+	setArray = malloc(length * sizeof(int));
 
 	for (i = 0; i < length; i++)
 	{
 		setArray[i] = start->n;
-		start = start->next;	
+		start = start->next;
 	}
 	for (first_half = 0; first_half < (length / 2); first_half++)
 	{
@@ -39,7 +39,6 @@ int is_palindrome(listint_t **head)
 			free(setArray);
 			return (0);
 		}
-	
 	}
 	free(setArray);
 	return (1);
