@@ -1,1 +1,1 @@
- A readme file to complete Tasks oon understanding the concept of data stryctures in python.
+ A readme file for a project to complete Tasks to help understand the concept of data structures in python.
