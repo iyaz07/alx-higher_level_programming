@@ -7,14 +7,14 @@ class Square:
     """Define a class square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """"A construction size and position as argument"""
+        """A construction size and position as argument"""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-	"""Get the current size of the square"""
-        return (self.__size)
+         """Get the current size of the square"""
+         return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -49,7 +49,7 @@ class Square:
 
     def my_print(self):
         """A construction used to print a square with length of size"""
-        if self.__size is 0:
+        if self.__size == 0:
             print()
         else:
             for y in range(0, self.__position[1]):
