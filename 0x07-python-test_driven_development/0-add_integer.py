@@ -1,16 +1,21 @@
 #!/usr/bin/python3
 # 0-add_integer.py
 # Iyaz
-"""" A module to add two numbers
+"""
+A module to add two numbers
 
 This module performs the addition operation between two numbers,
 these numbers can be integers or floats.
-
 """
 
 
 def add_integer(a, b=98):
-    """Returns the integer addition of a and b
+    """
+    Prameters:
+        a (int or float): A decimal Integer
+        b (int or float): A decimal integer
+
+    Returns the integer addition of a and b
     """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
