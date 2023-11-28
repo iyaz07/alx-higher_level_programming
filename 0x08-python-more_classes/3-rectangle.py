@@ -13,10 +13,9 @@ class Rectangle:
         height(int)i
         self.__height * self.__width
         2 * (self.__height + self.__width
-
     Returns:
-        return height and width
-        """
+        Area, perimeter, and # shape
+    """
 
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -50,4 +49,16 @@ class Rectangle:
         return (self.__height * self.__width)
 
     def perimeter(self):
-        return (2 * (self.__height + self.__width))
+        if (self.__width == 0 or self.__height == 0):
+            return 0
+        return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        shape = ""
+        if self.__height == 0 or self.__width == 0:
+            return shape
+        for i in range(self.__height):
+            shape += (self.__width * "#")
+            if i < self.__height - 1:
+                shape += "\n"
+        return shape

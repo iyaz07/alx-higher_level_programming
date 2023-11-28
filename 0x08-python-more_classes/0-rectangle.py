@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Iyaz
+# Iyaz
 """
 This module contains the class "Rectangle".
 """
