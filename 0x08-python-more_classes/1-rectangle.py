@@ -6,7 +6,8 @@ This module contains the class "Rectangle".
 
 
 class Rectangle:
-    def __init__(self, height, width):
+    """This is a Rectangle with 2 integers representing length and width"""
+    def __init__(self, width, height):
         self.height = height
         self.width = width
 
@@ -32,6 +33,6 @@ class Rectangle:
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
