@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # Iyaz
-
+"""
+This module contains the class "Rectangle".
+"""
 
 class rectangle:
     def __init__(self, width, height):
