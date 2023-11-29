@@ -4,6 +4,7 @@
 This module contains the class "Rectangle".
 """
 
+
 class rectangle:
     def __init__(self, width, height):
         self.width = width
