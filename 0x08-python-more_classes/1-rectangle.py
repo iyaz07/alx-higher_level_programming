@@ -5,7 +5,7 @@ This module contains the class "Rectangle".
 """
 
 
-class rectangle:
+class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
