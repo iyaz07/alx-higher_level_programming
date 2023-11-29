@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    magic_string.call_count = getattr(magic_string, 'call_count', 0) + 1
-    return ', '.join(['BestSchool'] * magic_string.call_count)
-
-magic_string.call_count = 0
+    magic_string.n = getattr(magic_string, 'n', 0) + 1
+    return "BestSchool" + (', BestSchool' * magic_string.n)
