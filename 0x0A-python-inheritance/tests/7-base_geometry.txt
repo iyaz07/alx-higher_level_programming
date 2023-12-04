@@ -1,0 +1,52 @@
+ ``7-base_geometry test file``
+
+
+Using ``integer_validator`` function
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> bg = BaseGeometry()
+	
+	>>> bg.integer_validator("Regular", 12)
+	
+	>>> bg.integer_validator("Two", 89)
+
+	>>> bg.integer_validator("Usingstring", "John")
+	Traceback (most recent call last):
+	...
+	TypeError: Usingstring must be an integer
+
+	>>> bg.integer_validator("Usingfloat", 5.23)
+	Traceback (most recent call last):
+	...
+	TypeError: Usingfloat must be an integer
+
+	>>> bg.integer_validator("usinginffloat", float("inf"))
+	Traceback (most recent call last):
+	...
+	TypeError: usinginffloat must be an integer
+
+	>>> bg.integer_validator("booleanvalue", False)
+	Traceback (most recent call last):
+	...
+	TypeError: booleanvalue must be an integer
+
+	>>> bg.integer_validator("UsingZero", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: UsingZero must be greater than 0
+
+	>>> bg.integer_validator("Negative", -4)
+	Traceback (most recent call last):
+        ...
+	ValueError: Negative must be greater than 0
+
+	>>> bg.integer_validator("Justfirstargument")
+	Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
