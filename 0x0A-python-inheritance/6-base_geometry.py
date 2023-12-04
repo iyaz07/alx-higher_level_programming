@@ -8,5 +8,4 @@ class BaseGeometry():
         pass
 
     def area(self):
-        raise Exceptiom("area() is not implemented")
-~         
+        raise Exceptiom("area() is not implemented")         
