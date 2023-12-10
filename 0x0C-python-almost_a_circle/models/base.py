@@ -56,16 +56,12 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
-        """
-        class method to load an instance from json file
-        """
-        list_inst = []
-        file_name = cls.__name__ + ".json"
-        if not os.path.isfile(file_name):
+        """Returns a list of instances from a JSON file."""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as file:
+                content = file.read()
+                dict_list = cls.from_json_string(content)
+                return [cls.create(**d) for d in dict_list]
+        except FileNotFoundError:
             return []
-        with open(file_name, encoding="UTF-8") as fd:
-            inst_dict_js = fd.read()
-        inst_dict = cls.from_json_string(inst_dict_js)
-        for inst in inst_dict:
-            list_inst.append(cls.create(**inst))
-        return list_inst
