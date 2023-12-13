@@ -16,7 +16,6 @@ class TestBase(unittest.TestCase):
         """Tears down obj count
         """
         Base._Base__nb_objects = 0
-        self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_instance(self):
         """Test instantiation
@@ -38,6 +37,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(o6.id, ["list", 4, 2.5])
         self.assertEqual(o7.id, 2)
         self.assertEqual(Base._Base__nb_objects, 2)
+        self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_to_json_string(self):
         """Testing to_json_string()
