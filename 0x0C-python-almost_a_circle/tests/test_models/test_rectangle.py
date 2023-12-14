@@ -97,6 +97,9 @@ class TestRectangle(unittest.TestCase):
             Rectangle(5, False)
             raise TypeError()
 
+        with self.assertRaises(TypeError):
+            raise TypeError()
+
         with self.assertRaises(ValueError):
             Rectangle(5, -4798576398576)
             raise ValueError

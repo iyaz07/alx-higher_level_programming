@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-The Recatngle class module
+The Rectangle class module
 """
 
 
@@ -26,10 +26,9 @@ class Rectangle(Base):
         """
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
-        elif width <= 0:
+        if width <= 0:
             raise ValueError("width must be > 0")
-        else:
-            self.__width = width
+        self.__width = width
 
     @property
     def height(self):
@@ -43,7 +42,9 @@ class Rectangle(Base):
         """
         height setter
         """
-        if not isinstance(height, int):
+        if isinstance(height, bool):
+            self.__height = 1 if height else 0
+        elif not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
