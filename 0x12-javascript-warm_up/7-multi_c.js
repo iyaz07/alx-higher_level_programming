@@ -4,9 +4,7 @@ let output;
 if (isNaN(x)) {
   output = 'Missing number of occurrences';
   console.log(output);
-}
-else
-{
+} else {
   output = 'C is fun';
   let i;
   for (i = 0; i < x; i++)
