@@ -11,8 +11,6 @@ if (size) {
       console.log('');
     }
   }
-}
-else
-{
+} else {
 	console.log('Missing size');
 }
