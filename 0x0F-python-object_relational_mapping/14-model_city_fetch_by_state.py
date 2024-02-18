@@ -19,13 +19,14 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3])
 
     # Initialize engine
-    engine = create_engine(db_url)
+    engine = create_engine(db_url)I
+    Base.metadata.create_all(engine)
 
     # Initialize session
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    #query
+    # Query
     query = session.query(State.name, City.id, City.name)
     query = query.filter(State.id == City.state_id)
     query = query.order_by(City.id)
