@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Prints the first State object from the
-database hbtn_0e_6_usa
+Prints the State object from the
+database hbtn_0e_6_usa that contains 'a'
 """
 
 from sys import argv
@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     """
     Access the database and fetch
-    first state
+    state that contaains 'a'
     """
 
     db_url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Query
-    for instance session.query(State).filter(State.name.contains('a')):
+    for instance in session.query(State).filter(State.name.contains('a')):
         print("{}: {}".format(instance.id, instance.name))
 
     # Close session
