@@ -27,7 +27,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Query
-    instance = session.query(State).filter(State.name == argv[4])
+    instance = session.query(State).filter(State.name == argv[4]).first()
 
     # Print query
     if instance is None:
