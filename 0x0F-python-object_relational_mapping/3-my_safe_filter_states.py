@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Displays all values in the states table of hbtn_0e_0_usa where
-name matches argv(4)
+name matches argv(4) and manages
 """
 
 import MySQLdb
