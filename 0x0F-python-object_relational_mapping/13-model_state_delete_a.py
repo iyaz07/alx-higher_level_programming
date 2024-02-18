@@ -20,13 +20,14 @@ if __name__ == "__main__":
 
     # Initialize engine
     engine = create_engine(db_url)
+    Base.metadata.create_all(engine)
 
     # Initialize session
     Session = sessionmaker(bind=engine)
     session = Session()
 
      # Update record
-    for instance in session.query(State).filter(State.name.contains('a')):
+    for instance in session.query(State).filter(State.name.like('%a%')):
         session.delete(instance)
 
     session.commit()
