@@ -5,6 +5,7 @@ database hbtn_0e_6_usa
 """
 
 from sys import argv
+from relationship_state import Base, State
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -20,11 +21,11 @@ if __name__ == "__main__":
 
     # Initialize engine
     engine = create_engine(db_url)
+    Base.metadata.create_all(engine)
 
     # Initialize session
     Session = sessionmaker(bind=engine)
-    session = Session()
-    Base.metadata.create_all(engine)
+    session = Session() 
 
    # Query
     State_list = Session.query(State).order_by(State.id)
