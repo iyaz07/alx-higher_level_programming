@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints all State object from the
+Prints the first State object from the
 database hbtn_0e_6_usa
 """
 
@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     """
     Access the database and fetch
-    Cities
+    first state
     """
 
     db_url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -27,11 +27,10 @@ if __name__ == "__main__":
     session = Session()
 
     # Query
-    query = session.query(State.name, City.id, City.name)
-    query = query.filter(State.id == City.state_id)
-    query = query.order_by(City.id)
-    Element_list = query.all()
-
-    for element in Element_list:
-        print("{}: ({}) {}".format(element[0], element[1], element[2]))
-    Session.close()
+    New_State = State(name='California')
+    New_City = City(name='San Francisco')
+    New_State.cities.append(New_City)
+    Session.add(New_State)
+    Session.add(New_City)
+    Session.commit()
+    Session.close()    
