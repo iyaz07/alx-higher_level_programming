@@ -6,7 +6,7 @@ database hbtn_0e_6_usa
 
 from sys import argv
 from relationship_state import Base, State
-from model_state import Base, State
+from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
