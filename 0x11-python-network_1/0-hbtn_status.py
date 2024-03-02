@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Fetches a URL
-"""
+"""Fetches a URL"""
 import urllib.request
 
 if __name__ == "__main__":
